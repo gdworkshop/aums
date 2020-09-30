@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <title>Biblio List</title>
+        <link rel="stylesheet" href="../../opac/css/main.css" />
+        <link rel="stylesheet" href="../../opac/css/buttons.css" />
+        <link rel="shortcut icon" href="../../opac/images/favicon.ico" type="image/x-icon" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="layout" content="main"/>
+        <script type="text/javascript" src="../../opac/plugins/jquery-1-4-2-5/js/jquery/jquery-1.4.2-min.js"></script>
+        <script type="text/javascript" src="../../opac/js/application.js"></script>
+    </head>
+<body>
+        <div id="spinner" class="spinner" style="display:none;">
+            <img src="../../opac/images/spinner.gif" alt="Spinner" />
+        </div>
+        <div class="wrapper">
+        <!-- Logo -->
+		<div id="grailsLogo" class="logo">
+		<img src="../../opac/images/logo.gif" alt="Amritavidya OPAC search" border="0" />
+		</div>
+		<!-- End logo -->
+		<!-- Icon Set Table -->
+		<div class="iconset">
+		<table id="Table_01" class="iconsettable" border="0" cellpadding="0" cellspacing="0" >
+			<tr>
+				<td width="14">
+					<img src="../../opac/images/link_button_01.gif" alt="" border="0" />
+				</td>
+				<td  background="../../opac/images/link_button_02.gif" style="background-repeat:repeat-x" m>
+					<a href="../../opac/biblio/journalopacsearch_searchyn_n.html">
+					<img src="../../opac/images/image_03.gif" alt="Journal Search" border="0" style="float:left" />
+					</a>
+					<a href="../../opac/biblio/opacsearch_searchyn_n.html">
+					<img src="../../opac/images/image_05.gif" alt="Biblio Search" border="0" style="float:right" />
+					</a>
+				</td>
+				<td width="14">
+					<img src="../../opac/images/link_button_03.gif" alt="" border="0"  />
+				</td>
+			</tr>
+		</table>
+		</div>
+		</div>
+		<!-- End Icon Set Table -->
+    <script>
+    function openWindow(fileName)
+	{
+		var windowX=100;
+		var windowY=60;
+		dataitem = window.open(fileName, "dataitem", "toolbar=no,menubar=no,scrollbars=yes,width=800, height=650");
+		dataitem.moveTo(windowX,windowY);
+		return false;
+	}
+	function formSubmit(actionValue){
+		document.forms[0].action = actionValue;
+		return true;
+	}
+	</script>
+        <div class="body">
+            <div style="clear:both" class="searchselected">
+				<span  >Advanced Biblio Search</span> <span><a href="../../opac/biblio/opacsearch_searchyn_n.html">Biblio Search</a></span>
+			</div>
+            <form method="post" >
+            <div class="dialog">
+                <table>
+                	<tbody>
+                        <tr class="prop">
+                            <td valign="top" class="name">
+                                <label for="library">Library:</label>
+                            </td>
+                            <td valign="top" class="value ">
+                            	<select name="libraryId" id="libraryId" >
+<option value="0">All</option>
+<option value="7" >ASAG, Arasampalayam Library</option>
+<option value="6" >ASE Ettimadai Library</option>
+</select>
+                            </td>
+                        </tr>
+                        <tr class="prop">
+                            <td valign="top" colspan="4" >
+                                <select name="criteria1" id="criteria1" >
+<option value="All" >All</option>
+<option value="Title" >Title</option>
+<option value="Author" >Author</option>
+<option value="Keyword" >Keyword</option>
+<option value="Publisher" >Publisher</option>
+<option value="Subject" >Subject</option>
+<option value="Class Number" >Class Number</option>
+<option value="Series" >Series</option>
+<option value="Edition" >Edition</option>
+<option value="Accession No" >Accession No</option>
+<option value="ISBN" >ISBN</option>
+<option value="Call No" >Call No</option>
+<option value="Department" >Department</option>
+</select>
+                                <input type="text" name="critValue1" value="" id="critValue1" />
+                                <select name="critCondition1" id="critCondition1" >
+<option value="Starts With" >Starts With</option>
+<option value="Ends With" >Ends With</option>
+<option value="Anywhere" >Anywhere</option>
+<option value="Exact Phrase" >Exact Phrase</option>
+</select>
+                            </td>
+                        </tr>
+                        <tr class="prop">
+                            <td valign="top" colspan="4" >
+                                <select name="criteria2" id="criteria2" >
+<option value="All" >All</option>
+<option value="Title" >Title</option>
+<option value="Author" >Author</option>
+<option value="Keyword" >Keyword</option>
+<option value="Publisher" >Publisher</option>
+<option value="Subject" >Subject</option>
+<option value="Class Number" >Class Number</option>
+<option value="Series" >Series</option>
+<option value="Edition" >Edition</option>
+<option value="Accession No" >Accession No</option>
+<option value="ISBN" >ISBN</option>
+<option value="Call No" >Call No</option>
+<option value="Department" >Department</option>
+</select>
+                                <input type="text" name="critValue2" value="" id="critValue2" />
+                                <select name="critCondition2" id="critCondition2" >
+<option value="Starts With" >Starts With</option>
+<option value="Ends With" >Ends With</option>
+<option value="Anywhere" >Anywhere</option>
+<option value="Exact Phrase" >Exact Phrase</option>
+</select>
+                            </td>
+                        </tr>
+                        <tr class="prop">
+                            <td valign="top" colspan="4" >
+                                <select name="criteria3" id="criteria3" >
+<option value="All" >All</option>
+<option value="Title" >Title</option>
+<option value="Author" >Author</option>
+<option value="Keyword" >Keyword</option>
+<option value="Publisher" >Publisher</option>
+<option value="Subject" >Subject</option>
+<option value="Class Number" >Class Number</option>
+<option value="Series" >Series</option>
+<option value="Edition" >Edition</option>
+<option value="Accession No" >Accession No</option>
+<option value="ISBN" >ISBN</option>
+<option value="Call No" >Call No</option>
+<option value="Department" >Department</option>
+</select>
+                                <input type="text" name="critValue3" value="" id="critValue3" />
+                                <select name="critCondition3" id="critCondition3" >
+<option value="Starts With" >Starts With</option>
+<option value="Ends With" >Ends With</option>
+<option value="Anywhere" >Anywhere</option>
+<option value="Exact Phrase" >Exact Phrase</option>
+</select>
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td colspan="5">
+                        		<input class="submit" type="submit" value="Search Biblio" onClick="return formSubmit('advancedSearch')"  />
+                        		<input class="submit" type="submit" value="Reset" onClick="return formSubmit('resetOpacAdvancedSearch')"  />
+                        	</td>
+                        </tr>
+                    </tbody>
+            	</table>
+            </div>
+            </form>
+            <div class="list">
+                <table>
+                    <thead>
+                        <tr>
+                        	<th>Sl.No</th>
+                            <th>Library</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Subject</th>
+                            <th>Edition</th>
+                            <th>ISBN</th>
+                            <th>Copies</th>
+                            <th>Detail View</th>
+                            <th>OPAC List</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="paginateButtons">
+                Total&nbsp;rows:0
+            </div>
+        </div>
+    </body>
+</html>
+<body>
